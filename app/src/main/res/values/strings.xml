@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Proyecto final</string>
+    <string name="texts_are_equal">Los textos son iguales</string>
+    <string name="texts_are_not_equal">Los textos no son iguales</string>
+
+
+</resources>

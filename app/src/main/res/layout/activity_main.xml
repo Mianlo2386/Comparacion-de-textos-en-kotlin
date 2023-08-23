@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:text="Ingrese dos textos para comparar:"
+        android:textAlignment="center"
+        android:textColor="#1C3EB8"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="128dp"
+        android:hint="Ingrese texto 1"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="350dp"
+
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:hint="Ingrese texto 2"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/btnComparar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#203BC5"
+        android:onClick="onCompareClick"
+        android:text="Comparar"
+        app:cornerRadius="10dp" />
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:textSize="18sp"
+        android:textColor="#0A21B3"
+        android:textStyle="bold"
+
+        tools:text="Los textos son iguales" />
+
+    
+</androidx.appcompat.widget.LinearLayoutCompat>
