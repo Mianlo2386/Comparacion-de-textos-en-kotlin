@@ -1,11 +1,13 @@
 package com.curso.android.app.proyectofinal
 
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 
-class TextComparisonViewModel : ViewModel() {
-
+class TextComparisonViewModel(application: Application) : AndroidViewModel(application) {
+    private val context = getApplication<Application>().applicationContext
     private val _comparisonResultLiveData = MutableLiveData<String>()
     val comparisonResultLiveData: LiveData<String> get() = _comparisonResultLiveData
 
@@ -15,9 +17,9 @@ class TextComparisonViewModel : ViewModel() {
 
     fun compareTexts() {
         comparisonResult = if (text1 == text2) {
-            "Los textos son iguales"
+            context.getString(R.string.texts_are_equal)
         } else {
-            "Los textos no son iguales"
+            context.getString(R.string.texts_are_not_equal)
         }
         _comparisonResultLiveData.value = comparisonResult
     }
